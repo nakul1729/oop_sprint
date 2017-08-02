@@ -6,10 +6,11 @@ A module for handling school students related information
 class Student(object):
     """Basic student class"""
 
-    def __init__(self, name, ID, GPA):
+    def __init__(self, name, ID, GPA, status):
         self.name = name
         self._GPA = GPA     # protected
         self.__ID = ID      # private
+        self.status = status
 
     def get_GPA(self):
         return self._GPA
@@ -22,6 +23,7 @@ class Student(object):
 
 
 class GradStudent(Student):
+
     def __init__(self, name, ID, GPA):
         super().__init__(name, ID, GPA, 'Grad')
 
@@ -34,7 +36,9 @@ class GradStudent(Student):
     def get_advisor(self):
         return self.advisor
 
+
 class UndergradStudent(Student):
+
     def __init__(self, name, ID, GPA):
         super().__init__(name, ID, GPA, 'Undergrad')
 

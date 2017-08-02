@@ -1,9 +1,8 @@
 import pytest
 from student import Student, GradStudent, UndergradStudent
-#from student import Student
 
 
-s = Student(name='Doaa', ID='453535', GPA=2.3)
+s = Student(name='Doaa', ID='453535', GPA=2.3, status='Grad')
 s1 = GradStudent(name='Joe Smith', ID='453535', GPA=2.7)
 s2 = UndergradStudent(name='Sally Smith', ID='453535', GPA=2.7)
 
@@ -19,10 +18,10 @@ def test_GPA():
     assert s2.get_GPA() == 2.7
     assert s.get_GPA() == 2.3
 
+
 def test_pass():
     assert not s1.is_pass()
     assert s2.is_pass()
-    # pass
 
 
 def test_advisor():
@@ -33,6 +32,5 @@ def test_advisor():
 
 
 def test_ID():
-    # with pytest.raises(AttributeError):
-    #     id = s1.__ID()
-    pass
+    with pytest.raises(AttributeError):
+        id = s1.__ID()
