@@ -1,7 +1,9 @@
 import pytest
 # from student import Student, GradStudent, UndergradStudent
+from student import Student
 
 
+s = GradStudent(name='Joe Smith', ID='453535', GPA=2.7)
 # s1 = GradStudent(name='Joe Smith', ID='453535', GPA=2.7)
 # s2 = UndergradStudent(name='Sally Smith', ID='453535', GPA=2.7)
 
