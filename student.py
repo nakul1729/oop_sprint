@@ -9,7 +9,7 @@ class Student(object):
     def __init__(self, name, ID, GPA):
         self.name = name
         self._GPA = GPA     # protected
-        self.__ID =         # private
+        self.__ID = ID        # private
 
     def get_GPA(self):
         return self._GPA
